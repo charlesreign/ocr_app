@@ -7,10 +7,6 @@ WORKDIR /code
 # 
 COPY ./requirements.txt /code/requirements.txt
 
-RUN python3 -m venv /code/venv
-
-RUN . /code/venv/bin/activate
-
 # 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
