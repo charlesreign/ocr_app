@@ -10,3 +10,4 @@ def ocr(image: UploadFile = File(...)):
   with open(filePath, "w+b") as buffer:
     shutil.copyfileobj(image.file, buffer)
   return pytesseract.image_to_string(filePath, lang='eng')
+
